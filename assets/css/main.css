@@ -38,6 +38,10 @@ a.btn {
   opacity: 1;
 }
 
+a.btn:hover {
+  opacity: .8;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -76,6 +80,35 @@ section p {
   padding: 0 20px;
   margin-bottom: 30px;
   text-align: justify;
+}
+
+section h3.title {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+section hr {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+section p {
+  opacity: 0;
+}
+
+.fade-in {
+  animation: 1s fadein 0.5s forwards;
+}
+
+.slide-in {
+  animation: .75s slideIn 0.2s forwards;
+}
+
+@keyframes slideIn {
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 @media screen and (max-width:800px) {
@@ -141,9 +174,20 @@ header nav li {
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
+  overflow:hidden;
   z-index: -1;
   background-color: #80a3db;
+}
+
+.hero-overlay{
+  height:100vh;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  z-index:0;
+  background:#80a3db;
+  opacity:0.5;
 }
 
 .hero h1 {
@@ -210,10 +254,14 @@ header nav li {
 
 .destinations .grid li.small {
   flex-basis: 30%;
+  transform: translateY(-75px);
+  opacity: 0;
 }
 
 .destinations .grid li.large {
   flex-basis: 70%;
+  transform: translateY(75px);
+  opacity: 0;
 }
 
 @media screen and (max-width: 1100px) {
@@ -237,8 +285,14 @@ header nav li {
   text-align: center;
 }
 
+.packages .grid li {
+  transform: skew(30deg);
+  opacity: 0;
+}
+
 .packages .grid li p {
   text-align: justify;
+  opacity: 1;
 }
 
 .packages .grid li i {
@@ -248,6 +302,20 @@ header nav li {
 .packages .grid li h4 {
   font-size: 27px;
   margin: 25px 0;
+}
+
+.rotate-and-fade-in {
+  animation: 1.25s rotateAndFadeIn 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes rotateAndFadeIn {
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+    transform: skew(0deg);
+  }
 }
 
 @media screen and (max-width: 800px) {
