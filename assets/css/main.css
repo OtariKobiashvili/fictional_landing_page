@@ -101,7 +101,7 @@ section p:not(.quote):not(.author) {
 }
 
 .slide-in {
-  animation: .75s slideIn 0.25s forwards;
+  animation: .75s slideIn 0.2s forwards;
 }
 
 @keyframes slideIn {
@@ -254,10 +254,14 @@ header nav li {
 
 .destinations .grid li.small {
   flex-basis: 30%;
+  transform: translateY(-75px);
+  opacity: 0;
 }
 
 .destinations .grid li.large {
   flex-basis: 70%;
+  transform: translateY(75px);
+  opacity: 0;
 }
 
 @media screen and (max-width: 1100px) {
