@@ -82,6 +82,35 @@ section p {
   text-align: justify;
 }
 
+section h3.title {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+section hr {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+section p:not(.quote):not(.author) {
+  opacity: 0;
+}
+
+.fade-in {
+  animation: 1s fadein 0.5s forwards;
+}
+
+.slide-in {
+  animation: .75s slideIn 0.25s forwards;
+}
+
+@keyframes slideIn {
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 @media screen and (max-width:800px) {
   section {
     padding: 50px 20px;
@@ -254,6 +283,7 @@ header nav li {
 
 .packages .grid li p {
   text-align: justify;
+  opacity: 1;
 }
 
 .packages .grid li i {
