@@ -19,7 +19,7 @@ function animateOnScroll(){
 };
 
 /**
- * Resets ad video when unmuted, for the first time
+ * Adds animation to selected array of elements.
  *
  * @param {Array} els - Array of elements to animate.
  * @param {String} animation - CSS animation to use.
@@ -33,7 +33,7 @@ function animateElements(els, animation){
 }
 
 /**
- * Resets ad video when unmuted, for the first time
+ * Checks if element is in view after scrolling.
  *
  * @param {Element} el - Element to check visibility of.
  */
