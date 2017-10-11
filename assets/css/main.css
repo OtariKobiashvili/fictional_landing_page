@@ -38,6 +38,10 @@ a.btn {
   opacity: 1;
 }
 
+a.btn:hover {
+  opacity: .8;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -141,9 +145,20 @@ header nav li {
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
+  overflow:hidden;
   z-index: -1;
   background-color: #80a3db;
+}
+
+.hero-overlay{
+  height:100vh;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  z-index:0;
+  background:#80a3db;
+  opacity:0.5;
 }
 
 .hero h1 {
