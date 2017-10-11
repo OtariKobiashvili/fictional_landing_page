@@ -8,14 +8,16 @@ function animateOnScroll(){
       sectionTitles = document.querySelectorAll("section h3.title"),
       sectionHRs = document.querySelectorAll("section hr"),
       sectionParagraphs = document.querySelectorAll("section p"),
-      destImages = document.querySelectorAll(".destinations .grid li");
+      destImages = document.querySelectorAll(".destinations .grid li"),
+      packagesInfo = document.querySelectorAll(".packages .grid li");
 
 
 
   animateElements(sectionTitles, "slide-in");
   animateElements(sectionHRs, "slide-in");
   animateElements(sectionParagraphs, "fade-in");
-  animateElements(destImages, "slide-in")
+  animateElements(destImages, "slide-in");
+  animateElements(packagesInfo, "rotate-and-fade-in");
 };
 
 function animateElements(els, animation){

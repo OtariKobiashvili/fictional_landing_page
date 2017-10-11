@@ -92,7 +92,7 @@ section hr {
   transform: translateY(50px);
 }
 
-section p:not(.quote):not(.author) {
+section p {
   opacity: 0;
 }
 
@@ -285,6 +285,11 @@ header nav li {
   text-align: center;
 }
 
+.packages .grid li {
+  transform: skew(30deg);
+  opacity: 0;
+}
+
 .packages .grid li p {
   text-align: justify;
   opacity: 1;
@@ -297,6 +302,20 @@ header nav li {
 .packages .grid li h4 {
   font-size: 27px;
   margin: 25px 0;
+}
+
+.rotate-and-fade-in {
+  animation: 1.25s rotateAndFadeIn 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes rotateAndFadeIn {
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+    transform: skew(0deg);
+  }
 }
 
 @media screen and (max-width: 800px) {
